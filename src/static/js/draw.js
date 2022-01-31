@@ -73,8 +73,6 @@ function hexToRgb(hex) {
 
 $(document).ready(function() {
   var drawurl = window.location.href.split("?")[0]; // get the drawing url
-  $('#embedinput').val("<iframe name='embed_readwrite' src='" + drawurl + "?showControls=true&showChat=true&showLineNumbers=true&useMonospaceFont=false' width=600 height=400></iframe>"); // write it to the embed input
-  $('#linkinput').val(drawurl); // and the share/link input
   $('#drawTool > a').css({
     background: "#eee"
   }); // set the drawtool css to show it as active
@@ -566,9 +564,6 @@ $color.on('click', function() {
 
 $('#pickerSwatch').on('click', function(event) {
   $('#mycolorpicker').toggle();
-});
-$('#embedlink').on('click', function() {
-  $('#embed').fadeToggle();
 });
 $('#importExport').on('click', function() {
   $('#importexport').fadeToggle();
