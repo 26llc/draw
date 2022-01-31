@@ -83,7 +83,13 @@ describe("Clear canvas", function(){
   it("clears local canvas", function(done) {
     this.timeout(10000);
     var chrome$ = helper.padChrome$;
-    chrome$("#clearCanvas").click();
+    const confirm = window.frames[0].confirm;
+    window.frames[0].confirm = () => true;
+    try {
+      chrome$("#clearImage").click();
+    } finally {
+      window.frames[0].confirm = confirm;
+    }
 
     if (window.frames[0].paper.project.activeLayer.children.length != 0) {
       throw new Error("Project is not empty. Number of children = " + window.frames[0].paper.project.activeLayer.children.length + " instead of 0.");

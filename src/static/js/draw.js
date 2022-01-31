@@ -567,9 +567,6 @@ $color.on('click', function() {
 $('#pickerSwatch').on('click', function(event) {
   $('#mycolorpicker').toggle();
 });
-$('#settingslink').on('click', function() {
-  $('#settings').fadeToggle();
-});
 $('#embedlink').on('click', function() {
   $('#embed').fadeToggle();
 });
@@ -578,10 +575,6 @@ $('#importExport').on('click', function() {
 });
 $('#usericon').on('click', function() {
   $('#mycolorpicker').fadeToggle();
-});
-$('#clearCanvas').on('click', function() {
-  clearCanvas();
-  socket.emit('canvas:clear', room);
 });
 $('#exportSVG').on('click', function() {
   exportSVG();

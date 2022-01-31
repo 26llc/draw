@@ -241,9 +241,6 @@ body {
 .buttonicon-upload {
   background-image: url('../../static/img/upload.png');
 }
-.buttonicon-settings {
-  background-position: 0px -436px
-}
 .buttonicon-import_export {
   background-position: 0px -68px
 }
@@ -309,7 +306,6 @@ input[type=checkbox] {
   float: left;
   width: 50%;
 }
-#settings,
 #importexport,
 #embed,
 #connectivity,
@@ -412,7 +408,6 @@ input[type=checkbox] {
       box-sizing: border-box;
       width: 100%;
     }
-    #settings,
     #importexport,
     #connectivity,
     #embed {
